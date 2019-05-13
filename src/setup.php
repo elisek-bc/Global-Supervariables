@@ -10,11 +10,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 <body>
-    <div class="container">
+    <div class="wrapper">
         <!--POST PART-->
-        <div class="row poster">
+        <div class="row poster m-auto">
         <form method="post" action="result.php"> 
-            <div class="col-12 movies">            
+            <div class="col-12 movies m-auto text-center">            
                     <h2>Top 5 Disney movies</h2>
                     <input type="text" name="movie1" value="Up!">
                     <br>
@@ -26,7 +26,7 @@
                     <br>
                     <input type="text" name="movie5" value="Big Hero 6">               
             </div>
-            <div class="col-12 shows">              
+            <div class="col-12 shows m-auto text-center">              
                     <h2>Top 5 tv shows</h2>
                     <input type="text" name="show1" value="Money Heist">
                     <br>
@@ -44,13 +44,13 @@
     </div>
         
         <!--GET PART-->
-        <div class="row getter">
+        <div class="row getter m-auto">
         <form method="get" action="result.php"> 
-            <div class="col-12 country">
+            <div class="col-12 country m-auto text-center">
                 <h2>Favourite country</h2>
                 <input type="text" name="country" value="Italy">
             </div>
-            <div class="col-12 worst">
+            <div class="col-12 worst m-auto text-center">
                 <h2>Worst movie ever seen</h2>
                 <input type="text" name="worst" value="Into the wild">
                 <br>
