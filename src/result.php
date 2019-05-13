@@ -35,4 +35,6 @@
         $movie = htmlspecialchars($_REQUEST['worst']);
         echo "<p><font color=red font face='arial' size='5pt'>$movie</p>";
     }
+
+    
 ?>

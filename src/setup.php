@@ -11,6 +11,15 @@
 </head>
 <body>
     <div class="wrapper">
+    <div class="row">
+        <div class="col">
+        <form method="post" action="login.php">
+            <input type='text' placeholder='username' name='username' value='random'>
+            <input type='password' placeholder='password' name='password' value='randomPass'>
+            <input type='submit' value='submit'>
+        </form>
+        <div class="col">
+    </div>
         <!--POST PART-->
         <div class="row poster m-auto">
         <form method="post" action="result.php"> 
