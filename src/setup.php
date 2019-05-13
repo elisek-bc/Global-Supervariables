@@ -13,8 +13,8 @@
     <div class="container">
         <!--POST PART-->
         <div class="row poster">
-            <div class="col-6 movies">
-                <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+        <form method="post" action="result.php"> 
+            <div class="col-12 movies">            
                     <h2>Top 5 Disney movies</h2>
                     <input type="text" name="movie1" value="Up!">
                     <br>
@@ -24,30 +24,9 @@
                     <br>
                     <input type="text" name="movie4" value="Rapunzel">
                     <br>
-                    <input type="text" name="movie5" value="Big Hero 6">
-                    <br>
-                    <input type="submit" value="Submit">
-                </form> 
+                    <input type="text" name="movie5" value="Big Hero 6">               
             </div>
-
-            <?php
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                // collect value of input field
-            $name = htmlspecialchars($_REQUEST['movie1']);
-            echo $name;
-            $name2 = htmlspecialchars($_REQUEST['movie2']);
-            echo $name2;
-            $name3 = htmlspecialchars($_REQUEST['movie3']);
-            echo $name3;
-            $name4 = htmlspecialchars($_REQUEST['movie4']);
-            echo $name4;
-            $name5 = htmlspecialchars($_REQUEST['movie5']);
-            echo $name5;
-            }
-            ?>
-
-            <div class="col-6 shows">
-                <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+            <div class="col-12 shows">              
                     <h2>Top 5 tv shows</h2>
                     <input type="text" name="show1" value="Money Heist">
                     <br>
@@ -59,37 +38,25 @@
                     <br>
                     <input type="text" name="show5" value="Riverdale">
                     <br>
-                    <input type="submit" value="Submit">
-                </form> 
+                    <input type="submit" value="Submit">         
             </div>
-
-            <?php
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                // collect value of input field
-            $show = htmlspecialchars($_REQUEST['show1']);
-            echo $show;
-            $show2 = htmlspecialchars($_REQUEST['show2']);
-            echo $show2;
-            $show3 = htmlspecialchars($_REQUEST['show3']);
-            echo $show3;
-            $show4 = htmlspecialchars($_REQUEST['show4']);
-            echo $show4;
-            $show5 = htmlspecialchars($_REQUEST['show5']);
-            echo $show5;
-            }
-            ?>
+        </form>
     </div>
         
         <!--GET PART-->
         <div class="row getter">
-            <div class="col-6 country">
+        <form method="get" action="result.php"> 
+            <div class="col-12 country">
                 <h2>Favourite country</h2>
-                <p>Italy</p>
+                <input type="text" name="country" value="Italy">
             </div>
-            <div class="col-6 worst">
+            <div class="col-12 worst">
                 <h2>Worst movie ever seen</h2>
-                <p>Into the wild</p>
+                <input type="text" name="worst" value="Into the wild">
+                <br>
+                <input type="submit" value="Submit">
             </div>
+        </form>
         </div>
     </div>
 </body>
