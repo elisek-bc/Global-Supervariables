@@ -21,7 +21,7 @@ h3 {
 }
 
 
-p,li,input {
+p,li,input,td {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     font-size: 17px;
@@ -58,4 +58,15 @@ a, a:hover {
 
 div {
     padding-top:10px;
+}
+
+table {
+    display: inline-block;
+    background: white;
+    padding: 10px;
+    
+}
+
+td {
+    border-bottom: 2px dotted grey;;
 }

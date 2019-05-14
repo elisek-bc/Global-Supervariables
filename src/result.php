@@ -42,9 +42,11 @@
     <div id="movies" class="tab-content tab-pane">
         <?php
             echo "<h2>My favourite Disney movies are: </h2>";
+            echo "<table>";
             foreach($movieArray as $value){
-                echo "<p>$value</p>";       
+                echo "<tr><td>$value</td></tr>";       
             }
+            echo "</table>";
         ?> 
     </div>
 <!-------------------------------------------------------->
@@ -52,9 +54,11 @@
     <div id="shows" class="tab-content tab-pane">
         <?php 
             echo "<h2>My favourite shows are: </h2>";
+            echo "<table>";
             foreach($showArray as $value){
-                echo "<p>$value</p>";       
+                echo "<tr><td>$value</td></tr>";       
             }
+            echo "</table>";
         ?>
     </div>
 <!-------------------------------------------------------->
