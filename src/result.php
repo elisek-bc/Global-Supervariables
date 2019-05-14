@@ -1,11 +1,12 @@
 <!--NAVIGATION-->
 <div class="row navigation m-auto d-inline-block text-center">
     <ul class="nav nav-tabs">
-        <li><a href="#movies">movies</a></li>
-        <li><a href="#shows">shows</a></li>
-        <li><a href="#country">country</a></li>
-        <li><a href="#worst">worst movie</a></li>
+        <li><a class="nav-item nav-link" data-toggle="tab" role="tab" href="#movies">movies</a></li>
+        <li><a class="nav-item nav-link" data-toggle="tab" role="tab" href="#shows">shows</a></li>
+        <li><a class="nav-item nav-link" data-toggle="tab" role="tab" href="#country">country</a></li>
+        <li><a class="nav-item nav-link" data-toggle="tab" role="tab" href="#worst">worst movie</a></li>
     </ul>
+    
 </div>
 <!-------------------------------------------------------->
 <!--MAKING ARRAYS WITH PHP-->
@@ -14,7 +15,7 @@
 ?>
 
 <div class='wrapper'>
-
+<div class="tab-content" id="myTabContent">
     <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // collect value of input field
@@ -38,7 +39,7 @@
 
     <!--What needs to appear when you click the id with post-->
     <!--MOVIES PART-->
-    <div id="movies">
+    <div id="movies" class="tab-content tab-pane">
         <?php
             echo "<h2>My favourite Disney movies are: </h2>";
             foreach($movieArray as $value){
@@ -48,7 +49,7 @@
     </div>
 <!-------------------------------------------------------->
     <!--SHOWS PART-->
-    <div id="shows">
+    <div id="shows" class="tab-content tab-pane">
         <?php 
             echo "<h2>My favourite shows are: </h2>";
             foreach($showArray as $value){
@@ -67,7 +68,7 @@
         }
     ?>
 
-    <div id="country">
+    <div id="country" class="tab-content tab-pane">
     <h2>My favourite country is:</h2>
 
     <?php 
@@ -77,7 +78,7 @@
 <!-------------------------------------------------------->
 
     <!--WORST MOVIE PART-->
-    <div id="worst">  
+    <div id="worst" class="tab-content tab-pane">  
     <h2>The worst movie I ever saw is: </h2>
     
     <?php    
@@ -86,5 +87,9 @@
     </div>
 
 <!-------------------------------------------------------->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</div>
 </body>
 </html>

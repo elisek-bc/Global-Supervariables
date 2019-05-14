@@ -2,7 +2,7 @@ html,body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background-color: red;
+    background-color: thistle;
 }
 
 h2 {
@@ -21,7 +21,7 @@ h3 {
 }
 
 
-p,li,input,a {
+p,li,input {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     font-size: 17px;
@@ -47,4 +47,15 @@ input[type=submit] {
 
 .navigation {
     width: 100vw;
+}
+
+a, a:hover {
+    font-family: 'Oswald',sans-serif;
+    font-size: 20px;
+    color: purple;
+    text-transform: lowercase;
+}
+
+div {
+    padding-top:10px;
 }
