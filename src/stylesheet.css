@@ -12,8 +12,34 @@ h2 {
     text-transform: uppercase;
 }
 
+h3 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    color: white;
+    font-size: 36px;
+    text-transform: uppercase;
+}
+
+
 p,li,input {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     font-size: 17px;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    border: grey;
+}
+
+input[type=submit] {
+    background-color: black;
+    color:white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 20px 5px 20px;
+}
+
+.wrapper {
+    margin: 5%;
+    text-align:center;
 }

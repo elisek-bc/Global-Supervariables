@@ -2,6 +2,7 @@
 <?php
     require('header.php');
     ?>
+    <div class='wrapper'>
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // collect value of input field
@@ -14,22 +15,18 @@
             array_push($movieArray,htmlspecialchars($_POST["movie$i"]));
         };
 
-        echo "<ol>";
         foreach($movieArray as $value){
-            echo "<li>$value</li>";       
+            echo "<p>$value</p>";       
         }
-        echo "</ol>";
 
         echo "<h2>My favourite shows are: </h2>";
         for($i=1; $i < 6; $i++) {
             array_push($showArray,htmlspecialchars($_POST["show$i"]));
         };
 
-        echo "<ol>";
         foreach($showArray as $value){
-            echo "<li>$value</li>";       
+            echo "<p>$value</p>";       
         }
-        echo "</ol>";
 
     }
 
@@ -43,5 +40,6 @@
         echo "<p>$movie</p>";
     }  
 ?>
+</div>
 </body>
 </html>

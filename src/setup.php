@@ -15,9 +15,9 @@
         </div>
 
         <!--POST PART-->
-        <div class="row poster m-auto">
+        <div class="row poster m-auto text-center d-inline-block">
             <form method="post" action="result.php"> 
-                <div class="col-12 movies text-center mt-2">            
+                <div class="col-12 movies text-center mt-5 ">            
                     <h2>Top 5 Disney movies</h2>
                     <input type="text" name="movie1" value="Up!">
                     <br>
@@ -29,7 +29,7 @@
                     <br>
                     <input type="text" name="movie5" value="Big Hero 6">               
                 </div>
-                <div class="col-12 shows text-center mt-2">              
+                <div class="col-12 shows text-center mt-5">              
                     <h2>Top 5 tv shows</h2>
                     <input type="text" name="show1" value="Money Heist">
                     <br>
@@ -47,15 +47,15 @@
         </div>
         
         <!--GET PART-->
-        <div class="row getter m-auto">
+        <div class="row getter m-auto d-inline-block">
             <form method="get" action="result.php"> 
-                <div class="col-12 country mt-2 text-center">
+                <div class="col-12 country mt-5 text-center">
                     <h2>Favourite country</h2>
                     <input type="text" name="country" value="Italy">
                 </div>
-                <div class="col-12 worst mt-2 text-center">
+                <div class="col-12 worst mt-5 text-center">
                     <h2>Worst movie ever seen</h2>
-                    <input type="text" name="worst" value="Into the wild">
+                    <input type="text" name="worst" value="In the name of the rose">
                     <br>
                     <input type="submit" value="Submit">
                 </div>
