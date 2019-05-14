@@ -11,19 +11,22 @@
 </head>
 <body>
     <div class="wrapper">
-    <div class="row">
-        <div class="col">
-        <form method="post" action="login.php">
-            <input type='text' placeholder='username' name='username' value='random'>
-            <input type='password' placeholder='password' name='password' value='randomPass'>
-            <input type='submit' value='submit'>
-        </form>
-        <div class="col">
-    </div>
+
+    <!--LOGIN PART-->
+        <div class="row">
+            <div class="col">
+                <form method="post" action="login.php">
+                    <input type="text" placeholder="username" name="username" value="random">
+                    <input type="password" placeholder="password" name="password" value="randomPass">
+                    <input type="submit" value="submit">
+                </form>
+            <div class="col">
+        </div>
+
         <!--POST PART-->
         <div class="row poster m-auto">
-        <form method="post" action="result.php"> 
-            <div class="col-12 movies m-auto text-center">            
+            <form method="post" action="result.php"> 
+                <div class="col-12 movies text-center mt-2">            
                     <h2>Top 5 Disney movies</h2>
                     <input type="text" name="movie1" value="Up!">
                     <br>
@@ -34,8 +37,8 @@
                     <input type="text" name="movie4" value="Rapunzel">
                     <br>
                     <input type="text" name="movie5" value="Big Hero 6">               
-            </div>
-            <div class="col-12 shows m-auto text-center">              
+                </div>
+                <div class="col-12 shows text-center mt-2">              
                     <h2>Top 5 tv shows</h2>
                     <input type="text" name="show1" value="Money Heist">
                     <br>
@@ -48,24 +51,24 @@
                     <input type="text" name="show5" value="Riverdale">
                     <br>
                     <input type="submit" value="Submit">         
-            </div>
-        </form>
-    </div>
+                </div>
+            </form>
+        </div>
         
         <!--GET PART-->
         <div class="row getter m-auto">
-        <form method="get" action="result.php"> 
-            <div class="col-12 country m-auto text-center">
-                <h2>Favourite country</h2>
-                <input type="text" name="country" value="Italy">
-            </div>
-            <div class="col-12 worst m-auto text-center">
-                <h2>Worst movie ever seen</h2>
-                <input type="text" name="worst" value="Into the wild">
-                <br>
-                <input type="submit" value="Submit">
-            </div>
-        </form>
+            <form method="get" action="result.php"> 
+                <div class="col-12 country mt-2 text-center">
+                    <h2>Favourite country</h2>
+                    <input type="text" name="country" value="Italy">
+                </div>
+                <div class="col-12 worst mt-2 text-center">
+                    <h2>Worst movie ever seen</h2>
+                    <input type="text" name="worst" value="Into the wild">
+                    <br>
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
         </div>
     </div>
 </body>

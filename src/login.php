@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 <head>
     <title>Basics for Ajax </title>
 
@@ -15,7 +16,7 @@
     $password = "randomPass";
 
     if($_SERVER["REQUEST_METHOD"]=="POST"){
-        if ($_POST['username']===$username && $POST['password']===$password) {
+        if ($_POST["username"]==$username && $_POST["password"]==$password) {
             echo "Hello $username";
         } else {
             echo "Wrong password or username";
