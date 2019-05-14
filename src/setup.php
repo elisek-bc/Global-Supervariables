@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Global Variables PHP</title>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="stylesheet.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Oswald:400,700" rel="stylesheet">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-</head>
-<body>
+<?php
+ require('header.php')
+ ?>
     <div class="wrapper">
 
     <!--LOGIN PART-->
@@ -18,7 +9,7 @@
                 <form method="post" action="login.php">
                     <input type="text" placeholder="username" name="username" value="random">
                     <input type="password" placeholder="password" name="password" value="randomPass">
-                    <input type="submit" value="submit">
+                    <input type="submit" value="Submit">
                 </form>
             <div class="col">
         </div>

@@ -24,6 +24,6 @@
     } else {
         echo "Wrong page, please log in";
     }
-    ?>      
+?>      
 </body>
 </html>
