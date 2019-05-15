@@ -91,7 +91,7 @@
     </div>
 
 <!-------------------------------------------------------->
-<!-- MAKE OBJECT OF ARRAYS-->
+<!-- MAKE OBJECT OF ARRAYS & STORE IT IN SESSION-->
 
 <?php 
     $movieObject = new stdClass();
@@ -115,8 +115,9 @@
         $movieObject,
         $showObject,
         $countryObject,
-        $worstObject];
-    ];
+        $worstObject
+        ];
+
 
     //make new general object of array of objects
     $data_object = new stdClass();
