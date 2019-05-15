@@ -91,6 +91,43 @@
     </div>
 
 <!-------------------------------------------------------->
+<!-- MAKE OBJECT OF ARRAYS-->
+
+<?php 
+    $movieObject = new stdClass();
+        foreach ($movieArray as $key => $value){
+        $movieObject->$key = $value;
+        }
+    $showObject = new stdClass();
+        foreach ($showArray as $key => $value){
+        $showObject->$key = $value;
+        }
+
+
+    $countryObject = (object) $country;
+    echo $obj->country; //country is just a random name
+
+    $worstObject = (object) $worst;
+    echo $obj->worstMovie; //worstMovie is just a random name
+    
+    //put all objects into array
+    $allData = [
+        $movieObject,
+        $showObject,
+        $countryObject,
+        $worstObject];
+    ];
+
+    //make new general object of array of objects
+    $data_object = new stdClass();
+        foreach ($allData as $key => $value){
+            $data_object->$key = $value;
+        }
+
+    //store object in session
+    $_SESSION["data"]= $data_object;
+?>
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
