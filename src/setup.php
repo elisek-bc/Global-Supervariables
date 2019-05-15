@@ -1,4 +1,7 @@
 <?php
+    session_start();
+?>
+<?php
  require('header.php')
  ?>
     <div class="wrapper">

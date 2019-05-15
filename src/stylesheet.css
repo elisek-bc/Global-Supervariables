@@ -30,6 +30,7 @@ p,li,input,td {
     padding: 5px;
     border-radius: 5px;
     border: grey;
+    list-style: none;
 }
 
 input[type=submit] {

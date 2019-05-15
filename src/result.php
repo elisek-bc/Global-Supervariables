@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!--NAVIGATION-->
 <div class="row navigation m-auto d-inline-block text-center">
     <ul class="nav nav-tabs">
@@ -10,6 +14,7 @@
 </div>
 <!-------------------------------------------------------->
 <!--MAKING ARRAYS WITH PHP-->
+
 <?php
     require('header.php');
 ?>
@@ -118,15 +123,24 @@
         $worstObject
         ];
 
-
     //make new general object of array of objects
     $data_object = new stdClass();
-        foreach ($allData as $key => $value){
+        /*foreach ($allData as $key => $value){
             $data_object->$key = $value;
-        }
+        }*/
 
+    $data_object= ["movies" => $movieObject,
+                    "shows" => $showObject,
+                    "country" => $countryObject,
+                    "worst"=> $worstObject];    
+
+    
     //store object in session
     $_SESSION["data"]= $data_object;
+
+    echo "<pre>";
+    var_dump($_SESSION["data"]);
+    echo "</pre>";
 ?>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
