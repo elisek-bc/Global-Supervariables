@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Oswald:400,700" rel="stylesheet">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
 <body>
 <?php
@@ -25,8 +26,8 @@ $tvshows = [
     <div class="wrapper">
         <div class="row">
             <div class="col">
-                <table class="table">
-                    <thead>
+                <table class="table table-dark">
+                    <thead class="thead-light">
                         <tr>
                             <th scope="col">Series</th>
                             <th scope="col">Rating on 5</th>
@@ -38,7 +39,15 @@ $tvshows = [
                     ?>
                     <tr>
                         <td><?php echo "<a href='https://www.google.com/search?client=ubuntu&channel=fs&q=$array[tvshow]' target='_blank'>$array[tvshow]</a>";?></td>
-                        <td><?php echo $array["rating"];?></td>   
+                        <td><?php 
+                        for($i=1;$i<=$array["rating"];$i++){
+                            echo "<i class='fas fa-star'></i>";
+                            }
+                        for($i=5;$i>$array["rating"];$i--){
+                            echo "<i class='fas fa-star white'></i>";
+                            }
+                            ?>
+                            </td>   
                     </tr>
                     <?php endforeach ?>                 
                     </tbody>
