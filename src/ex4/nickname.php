@@ -12,7 +12,8 @@
 <body>
     <div class="wrapper">
         <div class="row m-auto">
-            <div class="col-lg-6 m-auto text-center">
+            <div class="col m-auto text-center">
+                <h1>Cool nickname generator</h1>
                 <form method="post" action="test.php">
                     <input type='text' name="nickname" placeholder="Type your name...">
                     <input type='submit' name="submit" value="Generate">
