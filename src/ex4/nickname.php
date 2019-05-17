@@ -45,6 +45,10 @@
                             $randomWord = substr(str_shuffle("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"), 0, rand(2,4));
                             $nickname = $randomWord.$nickname;
                             echo "<br/>$nickname";
+                            //wrap characters in brackets
+                            $nickname = trim($nickname,$randomWord);
+                            $nickname = "<br/>[".$randomWord."]".$nickname;
+                            echo $nickname;
                             
 
                         };
