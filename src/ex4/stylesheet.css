@@ -15,7 +15,7 @@ html, body {
 .row {
     margin: 0;
     position: absolute;
-    top: 30%;
+    top: 20%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     left:50%;

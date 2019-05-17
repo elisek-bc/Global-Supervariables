@@ -49,6 +49,14 @@
                             $nickname = trim($nickname,$randomWord);
                             $nickname = "<br/>[".$randomWord."]".$nickname;
                             echo $nickname;
+                            //select random character of $nickname and check if upper or lowercase, change the case, print the string like that
+                            if(ctype_upper($nickname[rand(1, strlen($nickname))-1])===TRUE){
+                                strtolower($nickname[rand(1, strlen($nickname))-1]);
+                                echo $nickname;
+                            } else {
+                                strtoupper($nickname[rand(1, strlen($nickname))-1]);
+                                echo $nickname;
+                            }
                             
 
                         };
