@@ -24,38 +24,47 @@
                         if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             $nickname = $_POST["nickname"];
                             echo "$nickname<br/>";
+
                             //name backwards
                             $nickname = strrev($nickname);
                             echo "$nickname<br/>";
+
                             //name in uppercase
                             $nickname = strtoupper($nickname);
                             echo "$nickname<br/>";
+
                             //name backwards again
                             $nickname = strrev($nickname);
                             echo "$nickname<br/>";
+
                             //name with stripes before and after
                             $nickname = "--".$nickname."--";
                             echo $nickname;
+
                             //name without stripes and with x in front
                             $nickname = trim($nickname,"--");
                             $nickname = "x".$nickname;
                             echo "<br/>$nickname";
+
                             //name without x and with 2-4 random characters in front
                             $nickname = trim($nickname,"x");
                             $randomWord = substr(str_shuffle("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"), 0, rand(2,4));
                             $nickname = $randomWord.$nickname;
                             echo "<br/>$nickname";
+
                             //wrap characters in brackets
                             $nickname = trim($nickname,$randomWord);
-                            $nickname = "<br/>[".$randomWord."]".$nickname;
-                            echo $nickname;
+                            $nickname = "[".$randomWord."]".$nickname;
+                            echo "<br/>$nickname";
+                            $randomNumber = rand(1, strlen($nickname))-1;
+
                             //select random character of $nickname and check if upper or lowercase, change the case, print the string like that
-                            if(ctype_upper($nickname[rand(1, strlen($nickname))-1])===TRUE){
-                                strtolower($nickname[rand(1, strlen($nickname))-1]);
-                                echo $nickname;
+                            if(ctype_upper($nickname[$randomNumber])){
+                                $nickname[$randomNumber]=strtolower($nickname[$randomNumber]);
+                                echo "<br>".$nickname;
                             } else {
-                                strtoupper($nickname[rand(1, strlen($nickname))-1]);
-                                echo $nickname;
+                                $nickname[$randomNumber]=strtoupper($nickname[$randomNumber]);
+                                echo "<br>".$nickname;
                             }
                             
 
