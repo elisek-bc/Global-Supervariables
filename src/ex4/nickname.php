@@ -16,14 +16,37 @@
                 <h1>Cool nickname generator</h1>
                 <form method="post">
                     <input type='text' name="nickname" placeholder="Type your name...">
-                    <input type="submit" name="submit" value="Generate" id="button">
+                    <input type='submit' name="submit" value="Generate" id="button">
                 </form>
                 <div id="results">
                     <!--PHP STARTS HERE-->
                     <?php
                         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                            $nickname = htmlspecialchars($_POST['nickname']);
+                            $nickname = $_POST["nickname"];
+                            echo "$nickname<br/>";
+                            //name backwards
+                            $nickname = strrev($nickname);
+                            echo "$nickname<br/>";
+                            //name in uppercase
+                            $nickname = strtoupper($nickname);
+                            echo "$nickname<br/>";
+                            //name backwards again
+                            $nickname = strrev($nickname);
+                            echo "$nickname<br/>";
+                            //name with stripes before and after
+                            $nickname = "--".$nickname."--";
                             echo $nickname;
+                            //name without stripes and with x in front
+                            $nickname = trim($nickname,"--");
+                            $nickname = "x".$nickname;
+                            echo "<br/>$nickname";
+                            //name without x and with 2-4 random characters in front
+                            $nickname = trim($nickname,"x");
+                            $randomWord = substr(str_shuffle("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"), 0, rand(2,4));
+                            $nickname = $randomWord.$nickname;
+                            echo "<br/>$nickname";
+                            
+
                         };
                     ?>
                     <!--PHP ENDS HERE-->
@@ -37,12 +60,12 @@
     var button = document.getElementById('button');
     var row = document.querySelector('.row');
     
-    button.addEventListener('click',showResults);
+    /*button.addEventListener('click',showResults);
     function showResults(e){
         e.preventDefault(); // prevents reload: submit automatically reloads page
         results.style.display = 'block';
         row.style.top = '30%';
-    }
+    }*/
 </script>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
