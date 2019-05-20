@@ -29,7 +29,7 @@
     for($x = 0; $x < 1 ; $x++){
         array_push($fruits, 'Blueberries');
         $amountveggies['Lettuce'] = '1';
-		$candyObj->price = '1.56';
+		$candyObj->price = '1.56 euro';
     }
 
     // 4. create if statement to change something in array items 20 % chance
@@ -37,7 +37,16 @@
     echo $randomNum;
     
     if($randomNum == 5) {
-        blablabla
+        $fruits[rand(0,2)] = "Banana";
+        var_dump ($fruits);
+
+        $newveg = array_rand($amountveggies,1)/*=>"Beans")*/;
+        var_dump ($newveg);
+
+        $candy = (array)$candyObj;
+        $candyProp = array_rand($candy,1)/*=>"Beans")*/;
+        var_dump ($candyProp)/*=>"Beans")*/;
+
     } else {
         echo "Try again";
     }
