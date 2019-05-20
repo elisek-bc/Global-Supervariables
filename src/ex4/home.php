@@ -11,7 +11,7 @@
 </head>
 <body>
     <?php
-    //create array, associative array and object
+    //1. create array, associative array and object
     $fruits = array("Apple", "Pear", "Peach");
     $amountveggies = array("Avocado"=>"3", "Carrot"=>"6", "Asparagus"=>"10");
 
@@ -25,18 +25,12 @@
         return $array;
     }
 
-    function addItems($array){
-        for ($i=0; $i<?; $i++) {
-            if ($array == $fruits){
-                array_push($array,'Blueberries');
-            } else if ($array == $amountveggies) {
-                array_push_assoc($array,'Lettuce', 1);
-            } else {
-                $array->price = "1.5";
-            }
-        }
+    // 3. add something to each array with a for loop (why a for loop?...it's not necessary no?)
+    for($x = 0; $x < 1 ; $x++){
+        array_push($fruits, 'Blueberries');
+        $amountveggies['Lettuce'] = '1';
+		$candyObj->price = '1.56';
     }
-    
     ?>
 </body>
 </html>
