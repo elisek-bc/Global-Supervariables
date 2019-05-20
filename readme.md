@@ -80,4 +80,35 @@ I, Elise, am the only contributor to this project.
 This exercise started on 16th of May 2019; and is part of a series of exercises on PHP. All the exercises together have a 2-3 week deadline.
 
 #### Difficulties
+This is just a reading exercise zo there were no real difficulties here.
+
+### Exercise 4: Manipulation
+
+<b>STRING MANIPULATION</b>
+#### What?
+
+1. Create a nickname.php, on it create a form, with the title Cool NickName Generator.
+This form should have one text input and a button, which can only be pressed if more than one character is filled into the field. When you fill in the field and submit the form, take the filled in username and go through a series of steps dictated below:
+- Turn the name around
+- Capitalize it
+- Turn the name back around
+- Add -- to the front and back of the name
+- Add x to the front of the name
+- Add two to four random characters (A-Z, a-z, 0-9) in front of the name
+- Wrap those random characters with blocked parentheses []
+- Capitalize one more random character in the name (if the character is already capitalized, it should be de-capitalized)
+
+2. Bonus objective
+
+Give the nickname a gradient by wrapping each letter in a span with a different color style attribute to it
+
+
+#### Contributors
+I, Elise, am the only contributor to this project.
+
+#### Timing
+This exercise is a part of a series of PHP exercises with a 2-3 week deadline. I've worked on this exercise part 'string manipulation' on 17th of May 2019. 
+
+#### Difficulties
+The exercise was do-able but I did not manage to do the bonus objective.
 
