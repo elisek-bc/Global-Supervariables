@@ -39,13 +39,13 @@
     if($randomNum == 5) {
         $fruits[rand(0,2)] = "Banana";
         var_dump ($fruits);
-
+        or
         $newveg = array_rand($amountveggies,1)/*=>"Beans")*/;
         var_dump ($newveg);
-
+        or
         $candy = (array)$candyObj;
         $candyProp = array_rand($candy,1)/*=>"Beans")*/;
-        var_dump ($candyProp)/*=>"Beans")*/;
+        var_dump ($candyProp);
 
     } else {
         echo "Try again";
