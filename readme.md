@@ -133,4 +133,9 @@ I, Elise, am the only contributor to this project.
 #### Timing
 This exercise is part of a series of exercises on PHP with a 2-3 weeks deadline. I worked on this part of th exercise (Array manipulation) on 20th of May 2019.
 
+#### Answer to point 2
+- An array can hold many values under a single name, and you can access the values by referring to an index number.
+- An associative array has named keys with values, instead of just array index to address something you can also use the key name. For example ("Peter"=>"50","Jan=>"26",...) If you want Peters age you can just say $array['Peter'] to get it.
+- An object is an individual instance of the data structure defined by a class. We define a class once and then make many objects that belong to it. Objects are also known as instances. (don't really get this for now...)
+
 #### Difficulties
