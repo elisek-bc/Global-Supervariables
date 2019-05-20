@@ -31,6 +31,17 @@
         $amountveggies['Lettuce'] = '1';
 		$candyObj->price = '1.56';
     }
+
+    // 4. create if statement to change something in array items 20 % chance
+    $randomNum = rand(1,5);
+    echo $randomNum;
+    
+    if($randomNum == 5) {
+        blablabla
+    } else {
+        echo "Try again";
+    }
     ?>
+    
 </body>
 </html>
