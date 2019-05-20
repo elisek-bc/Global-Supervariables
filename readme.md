@@ -100,7 +100,7 @@ This form should have one text input and a button, which can only be pressed if 
 
 2. Bonus objective
 
-Give the nickname a gradient by wrapping each letter in a span with a different color style attribute to it
+- Give the nickname a gradient by wrapping each letter in a span with a different color style attribute to it
 
 
 #### Contributors
@@ -112,3 +112,25 @@ This exercise is a part of a series of PHP exercises with a 2-3 week deadline. I
 #### Difficulties
 The exercise was do-able but I did not manage to do the bonus objective.
 
+<b>OBJECT/ARRAY MANIPULATION</b>
+#### What?
+
+1. Create an array, an associative array and an object in home.php.
+2. What are the differences between an array, an associative array and an object? (*)
+3. Write a for-loop that adds an item to all of the above.
+4. Write an if-statement that has a 20% chance to edit a random item of one of the above.
+5. Put this if statement in a loop so every array/object has a random chance of having a random item changed
+6. Divide the array in half (if uneven items half-1, unless half-1 makes it empty)
+7. Remove the last item of the associative array
+8. Add the arrays to the object as arr1 and arr2
+9. Loop through the associative array adding all items to the object as key => value
+10. Save the object in the $_COOKIE superglobal
+11. Find a way to print this final object on the homepage, in an easily readable way
+
+#### Contributors
+I, Elise, am the only contributor to this project.
+
+#### Timing
+This exercise is part of a series of exercises on PHP with a 2-3 weeks deadline. I worked on this part of th exercise (Array manipulation) on 20th of May 2019.
+
+#### Difficulties
