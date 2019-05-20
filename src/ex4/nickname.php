@@ -1,3 +1,7 @@
+<?php
+require('Color.php');
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -68,13 +72,15 @@
                             };
 
                             //BONUS: gives every letter a darker color by putting it in a span
+                            /*using \Mexitek\PHPColors\Color; 
                             $color = new Color("336699");  //defines a color                   
                             echo $color; //gives the color
 
                             for ($i=0; $i<strlen($nickname); $i++) { //zo lang de string van nickname lang is; voor elke letter
-                                $color = $color->darken(20); //darkens the initial color
+                                $color = $color->darken(); //darkens the initial color
                                 echo "<span style='color: $color'>".$nickname[$i]."</span>"; //prints the letter in a darker color in a span
-                                echo $color; //prints the new color
+                                echo $color; //prints the new color*/
+                            
                             };
 
                             
