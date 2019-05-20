@@ -20,6 +20,22 @@
     $candyObj->taste = "Sweet";
     $candyObj->color = "Pink";
 
+    function array_push_assoc($array, $key, $value){
+        $array[$key] = $value;
+        return $array;
+    }
+
+    function addItems($array){
+        for ($i=0; $i<?; $i++) {
+            if ($array == $fruits){
+                array_push($array,'Blueberries');
+            } else if ($array == $amountveggies) {
+                array_push_assoc($array,'Lettuce', 1);
+            } else {
+                $array->price = "1.5";
+            }
+        }
+    }
     
     ?>
 </body>
