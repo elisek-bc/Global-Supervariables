@@ -1,3 +1,9 @@
+<?php
+    $cookie_name = "content";
+    $cookie_value = "fruit arrays";
+    setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); //keeps cookie for 1 day
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -71,6 +77,25 @@
     } else {
         echo "Try again";
     }
+
+    //5.?
+    //6. divide the array in half
+    $fruits1 = array_slice($fruits, 0, 2);
+    $fruits2 = array_slice($fruits, 2, 3);
+    var_dump($fruits1);
+    var_dump($fruits2);
+
+    //7. Remove the last item of the associative array
+    unset($amountveggies["Lettuce"]);
+    var_dump($amountveggies);
+
+    //8. Add the arrays to the object as arr1 and arr2
+    //9. Loop through the associative array adding all items to the object as key => value
+    
+    //10. Save the object in the $_COOKIE superglobal
+    
+
+    //11. Find a way to print this final object on the homepage, in an easily readable way
     ?>
     
 </body>
