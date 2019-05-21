@@ -36,21 +36,37 @@
     $randomNum = rand(1,5);
     echo $randomNum;
     
+    
     if($randomNum == 5) {
+        $randomFunc = rand(1,3);
+        switch ($randomFunc){
+
         // change in array
+        case 1:
         $fruits[rand(0,2)] = "Banana";
         var_dump ($fruits);
+        break;
         //or
+        
+        case 2:
         // change in associative array
         $customveg = array_rand($amountveggies,1);
         $amountveggies[$customveg] = "5";
         var_dump ($amountveggies);
+        break;
         //or
+
         //change in object
+        case 3:
         $candy = (array)$candyObj;
         $candyProp = array_rand($candy,1);
-        $candyObj->candyProp = "random";
+        $candyObj->$candyProp = "random";
         var_dump ($candyObj);
+        break;
+
+        default:
+        return;
+        }
 
     } else {
         echo "Try again";
