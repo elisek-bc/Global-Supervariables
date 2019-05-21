@@ -37,15 +37,20 @@
     echo $randomNum;
     
     if($randomNum == 5) {
+        // change in array
         $fruits[rand(0,2)] = "Banana";
         var_dump ($fruits);
-        or
-        $newveg = array_rand($amountveggies,1)/*=>"Beans")*/;
-        var_dump ($newveg);
-        or
+        //or
+        // change in associative array
+        $customveg = array_rand($amountveggies,1);
+        $amountveggies[$customveg] = "5";
+        var_dump ($amountveggies);
+        //or
+        //change in object
         $candy = (array)$candyObj;
-        $candyProp = array_rand($candy,1)/*=>"Beans")*/;
-        var_dump ($candyProp);
+        $candyProp = array_rand($candy,1);
+        $candyObj->candyProp = "random";
+        var_dump ($candyObj);
 
     } else {
         echo "Try again";
