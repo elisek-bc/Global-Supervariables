@@ -1,9 +1,3 @@
-<?php
-    $cookie_name = "content";
-    $cookie_value = "fruit arrays";
-    setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); //keeps cookie for 1 day
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -97,8 +91,16 @@
     var_dump($candyObj);
 
     //10. Save the object in the $_COOKIE superglobal
+    $candyObjNew = JSON_ENCODE($candyObj);//explanation needed: I think this encodes the object for security reasons, because it can't be in a cookie otherwise cause it's visible to hackers
+    setcookie("TestCookie", $candyObjNew , (time()+60*60*24*30));
+    
     //11. Find a way to print this final object on the homepage, in an easily readable way
     ?>
+    <pre>
+        <?php
+        print_r(JSON_DECODE($_COOKIE["TestCookie"]));//decodes the cookie
+        ?>
+    </pre>
     
 </body>
 </html>
