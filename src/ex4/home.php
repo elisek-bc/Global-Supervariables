@@ -91,10 +91,12 @@
 
     //8. Add the arrays to the object as arr1 and arr2
     //9. Loop through the associative array adding all items to the object as key => value
-    
-    //10. Save the object in the $_COOKIE superglobal
-    
+    foreach ($amountveggies as $key => $value){
+        $candyObj->$key = $value;
+    }
+    var_dump($candyObj);
 
+    //10. Save the object in the $_COOKIE superglobal
     //11. Find a way to print this final object on the homepage, in an easily readable way
     ?>
     
