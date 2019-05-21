@@ -44,7 +44,7 @@
         // change in array
         case 1:
         $fruits[rand(0,2)] = "Banana";
-        var_dump ($fruits);
+        //var_dump ($fruits);
         break;
         //or
         
@@ -52,7 +52,7 @@
         // change in associative array
         $customveg = array_rand($amountveggies,1);
         $amountveggies[$customveg] = "5";
-        var_dump ($amountveggies);
+        //var_dump ($amountveggies);
         break;
         //or
 
@@ -61,7 +61,7 @@
         $candy = (array)$candyObj;
         $candyProp = array_rand($candy,1);
         $candyObj->$candyProp = "random";
-        var_dump ($candyObj);
+        //var_dump ($candyObj);
         break;
 
         default:
@@ -76,19 +76,19 @@
     //6. divide the array in half
     $fruits1 = array_slice($fruits, 0, 2);
     $fruits2 = array_slice($fruits, 2, 3);
-    var_dump($fruits1);
-    var_dump($fruits2);
+    //var_dump($fruits1);
+    //var_dump($fruits2);
 
     //7. Remove the last item of the associative array
     unset($amountveggies["Lettuce"]);
-    var_dump($amountveggies);
+    //var_dump($amountveggies);
 
     //8. Add the arrays to the object as arr1 and arr2
     //9. Loop through the associative array adding all items to the object as key => value
     foreach ($amountveggies as $key => $value){
         $candyObj->$key = $value;
     }
-    var_dump($candyObj);
+    //var_dump($candyObj);
 
     //10. Save the object in the $_COOKIE superglobal
     $candyObjNew = JSON_ENCODE($candyObj);//explanation needed: I think this encodes the object for security reasons, because it can't be in a cookie otherwise cause it's visible to hackers
@@ -98,6 +98,11 @@
     ?>
     <pre>
         <?php
+        print_r($fruits);
+        print_r($amountveggies);
+        print_r($candyObj);
+        print_r($fruits1);
+        print_r($fruits2);
         print_r(JSON_DECODE($_COOKIE["TestCookie"]));//decodes the cookie
         ?>
     </pre>
