@@ -1,7 +1,12 @@
+<?php
+session_start();
+setcookie("TestCookie",(time()+60*60*24*30));
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Array & Object Manipulation PHP</title>
+    <title>String Manipulation PHP</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="stylesheet.css">
@@ -10,8 +15,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 <body>
-    <?php
-    //1. create array, associative array and object
+<?php
+//1. create array, associative array and object
     $fruits = array("Apple", "Pear", "Peach");
     $amountveggies = array("Avocado"=>"3", "Carrot"=>"6", "Asparagus"=>"10");
 
@@ -25,14 +30,14 @@
         return $array;
     }
 
-    // 3. add something to each array with a for loop (why a for loop?...it's not necessary no?)
+// 3. add something to each array with a for loop (why a for loop?...it's not necessary no?)
     for($x = 0; $x < 1 ; $x++){
         array_push($fruits, 'Blueberries');
         $amountveggies['Lettuce'] = '1';
 		$candyObj->price = '1.56 euro';
     }
 
-    // 4. create if statement to change something in array items 20 % chance
+// 4. create if statement to change something in array items 20 % chance
     $randomNum = rand(1,5);
     echo $randomNum;
     
@@ -72,40 +77,39 @@
         echo "Try again";
     }
 
-    //5.?
-    //6. divide the array in half
+//5.?
+//6. divide the array in half
     $fruits1 = array_slice($fruits, 0, 2);
     $fruits2 = array_slice($fruits, 2, 3);
     //var_dump($fruits1);
     //var_dump($fruits2);
 
-    //7. Remove the last item of the associative array
+//7. Remove the last item of the associative array
     unset($amountveggies["Lettuce"]);
     //var_dump($amountveggies);
 
-    //8. Add the arrays to the object as arr1 and arr2
-    //9. Loop through the associative array adding all items to the object as key => value
+//8. Add the arrays to the object as arr1 and arr2
+//9. Loop through the associative array adding all items to the object as key => value
     foreach ($amountveggies as $key => $value){
         $candyObj->$key = $value;
     }
     //var_dump($candyObj);
 
-    //10. Save the object in the $_COOKIE superglobal
+//10. Save the object in the $_COOKIE superglobal
     $candyObjNew = JSON_ENCODE($candyObj);//explanation needed: I think this encodes the object for security reasons, because it can't be in a cookie otherwise cause it's visible to hackers
-    setcookie("TestCookie", $candyObjNew , (time()+60*60*24*30));
-    
-    //11. Find a way to print this final object on the homepage, in an easily readable way
+    $_COOKIE["TestCookie"] = $candyObjNew;
     ?>
     <pre>
-        <?php
+    <?php
+    //11. Find a way to print this final object on the homepage, in an easily readable way
         print_r($fruits);
         print_r($amountveggies);
         print_r($candyObj);
         print_r($fruits1);
         print_r($fruits2);
-        print_r(JSON_DECODE($_COOKIE["TestCookie"]));//decodes the cookie
-        ?>
+        echo "<h2>My Cookie:</h2>";
+        var_dump(JSON_DECODE($_COOKIE["TestCookie"]));//decodes the cookie
+    ?>
     </pre>
-    
 </body>
 </html>

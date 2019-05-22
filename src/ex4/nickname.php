@@ -85,7 +85,7 @@ require('Color.php');
 
                             
 
-                        };
+                        
                     ?>
                     <!--PHP ENDS HERE-->
                 </div>
