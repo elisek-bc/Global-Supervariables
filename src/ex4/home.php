@@ -97,6 +97,9 @@ setcookie("TestCookie",(time()+60*60*24*30));
                     //var_dump($amountveggies);
 
                 //8. Add the arrays to the object as arr1 and arr2
+                    $candyObj->arr1 = $fruits1;
+                    $candyObj->arr2 = $fruits2;
+
                 //9. Loop through the associative array adding all items to the object as key => value
                     foreach ($amountveggies as $key => $value){
                         $candyObj->$key = $value;
