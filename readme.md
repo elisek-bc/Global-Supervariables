@@ -19,9 +19,9 @@ The data that needs to be sent, for $_POST: top 5 tv shows, top 5 movies, for $_
 
 ##### Bonus objectives
 
-    1. Use as many of the superglobal variables as you can
-    2. Put each variable's values in a tab (bootstrap tabs for example) on the result page
-    3. Loop through the data and post it in a table (as key => value)
+1. Use as many of the superglobal variables as you can
+2. Put each variable's values in a tab (bootstrap tabs for example) on the result page
+3. Loop through the data and post it in a table (as key => value)
 
 ##### Super bonus objectives
 
@@ -131,7 +131,7 @@ The exercise was do-able but I did not manage to do the bonus objective.
 I, Elise, am the only contributor to this project.
 
 #### Timing
-This exercise is part of a series of exercises on PHP with a 2-3 weeks deadline. I worked on this part of th exercise (Array manipulation) on 20th of May 2019.
+This exercise is part of a series of exercises on PHP with a 2-3 weeks deadline. I worked on this part of th exercise (Array manipulation) from 20th of May 2019, till 22th of May 2019.
 
 #### Answer to point 2
 - An array can hold many values under a single name, and you can access the values by referring to an index number.
@@ -139,3 +139,36 @@ This exercise is part of a series of exercises on PHP with a 2-3 weeks deadline.
 - An object is an individual instance of the data structure defined by a class. We define a class once and then make many objects that belong to it. Objects are also known as instances. (don't really get this for now...)
 
 #### Difficulties
+1. Adding an object to a cookie, and setting the cookie took me some time. I searched online a lot to find a solution, but eventually it worked out.
+2. Part 4, where you needed to have a 20 procent chance to change something in one of the arrays was also tricky. I figured out the 20 procent quickly, but just changing something in 1 of the arrays and not in all of them took me a while.
+
+### Exercise 5: Functions
+
+#### What?
+1. Create a home.php file
+2. Create a functions.php file
+3. Create a security.php file
+4. On your home.php create three boxes (next to each other, but bordered off) and give all of them one button:
+- Generate object
+- Revert object
+- Get a nickname (Give this box also an input field to type the nickname)
+5. Require security.php in your home.php file
+6. Include functions.php in your home.php file
+7. In your functions.php, create three functions:
+- nickname_generate(), ask for the parameter nickname in it, and use this parameter to do what you did in the string manipulation exercise
+- object_generate(), this does not take any parameters, but returns the object
+- object_revert(), this function should either take the object from the previous function (object_generate()) if it's passed to it as a parameter or create the object at the start if it wasn't passed
+- It should then do the following:
+    - it takes both halves of the original array out of the object and combines them back into one array
+    - it takes all the properties that the associative array gave to the object and puts them back into the associative arrays
+    - make sure that all the things you just put back into their original forms, you also remove from the object
+    - it prints out an easy-to-read version of all items on the page
+8. In security.php, write an HTML form that asks the user whether they are a bot from the future coming to exterminate the human race and are just here for a cool nickname
+9. If they answer yes, just give them back a nickname from the nickname generate function
+10. If they answer no, and only then, they can see the home.php page, so the user is not to see the home.php page until they answered no on this form.
+
+#### Contributors?
+I, Elise, am the only contributor to this project.
+
+### Timing
+This exercise is a part of a series of PHP exercises. I started on this part on 22th of May 2019.
