@@ -172,3 +172,7 @@ I, Elise, am the only contributor to this project.
 
 ### Timing
 This exercise is a part of a series of PHP exercises. I started on this part on 22th of May 2019.
+
+### Difficulties
+1. I skipped some parts in this exercise because I did not see the use of them.
+2. The hierarchy between documents stays confusing to me.
