@@ -176,3 +176,13 @@ This exercise is a part of a series of PHP exercises. I started on this part on 
 ### Difficulties
 1. I skipped some parts in this exercise because I did not see the use of them.
 2. The hierarchy between documents stays confusing to me.
+
+### Exercise 6: Conditions
+
+#### What?
+This is just a reading exercise on PHP conditions. I won't make further explanation about this in this readme.
+ 
+This was the text:
+Conditions are something we use to make the code decide what to execute/ what to run. From a simple if statement to the more advanced switch statement, knowing when to use which condition, can save you a lot of writing work.
+
+Look up the different conditional statements that exist for PHP and make sure you understand how to work with them. For now let's look at the most important one: if and everything that surrounds it.
