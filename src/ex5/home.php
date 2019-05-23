@@ -1,5 +1,6 @@
 <?php
     session_start();
+    setcookie("TestCookie",(time()+60*60*24*30));
     require('header.php');
     require('security.php');
     require('functions.php');
@@ -20,14 +21,18 @@
             <div class="col-4">
                 <div class="box text-center d-flex align-items-center justify-content-center">
                     <p class="corner">&#65</p>
-                    <button type="button">Generate object</button>
+                    <form method="post">
+                    <input type="submit" class="button" name="return" value="Return Object" />
+                    </form>
                     <p class="cornerbottom">&#65</p>
                 </div>
             </div>
             <div class="col-4">
                 <div class="box text-center d-flex align-items-center justify-content-center">
                     <p class="corner">&#65</p>
-                    <button type="button">Revert object</button>
+                    <form method="post">
+                    <button type="submit">Revert object</button>
+                    </form>
                     <p class="cornerbottom">&#65</p>
                 </div>
             </div>
@@ -49,6 +54,20 @@
                 </div>
             </div>
         </div>
+        <div class="row d-flex justify-content-center">
+                <div class="col returnobject text-center">
+                    <?php
+                        if(isset($_POST['return'])){
+                            print_r(returnObject());
+                        }                  
+                    ?>
+                    <?php
+                        if(isset($_POST['revert'])){
+                            print_r(revertObject());
+                        }                  
+                    ?>
+                </div>
+            </div>
     </div>
 </body>
 </html>

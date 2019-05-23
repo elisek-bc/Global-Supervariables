@@ -9,7 +9,6 @@
 body {
     overflow-x:hidden;
     background-color: wheat;
-    background-image: background-color: #f5deb3;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ab997f' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 
@@ -75,7 +74,7 @@ h3 {
     margin-top: 0px;
 }
 
-button {
+button, input[type=submit] {
     background-color: wheat;
     border: 1px solid peru;
     border-radius:0;
@@ -84,7 +83,7 @@ button {
     padding: 10px;
 }
 
-button:hover {
+input[type=submit]:hover , button:hover {
     transform: scale(1.1);
     border: 1px solid peru;
   }
@@ -105,4 +104,37 @@ input {
     margin: 0 auto;
     bottom:0px;
     right:0px;
+}
+
+.returnobject {
+    font-size: 12px;
+    background-color: wheat;
+    padding: 10px;
+    margin-top: 40px;
+    border-top: 1px solid peru;
+    max-width: 960px;
+}
+
+.message {
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+}
+
+#security {
+    display:block;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+input[type=radio] {
+    margin-top: 30px;
+}
+
+#ufo {
+    height: 150px;
+}
+
+.wrap {
+    height: 100vh;
 }

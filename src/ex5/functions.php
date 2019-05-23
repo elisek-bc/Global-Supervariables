@@ -35,5 +35,81 @@
             };
 
             return $nickname;
-        };
+    };
+    function returnObject(){
+        $fruits = array("Apple", "Pear", "Peach");
+        $amountveggies = array("Avocado"=>"3", "Carrot"=>"6", "Asparagus"=>"10");
+
+        $candyObj = new stdClass();
+        $candyObj->type = "Lollipop";
+        $candyObj->taste = "Sweet";
+        $candyObj->color = "Pink";
+
+        function array_push_assoc($array, $key, $value){
+            $array[$key] = $value;
+            return $array;
+        }
+
+        for($x = 0; $x < 1 ; $x++){
+            array_push($fruits, 'Blueberries');
+            $amountveggies['Lettuce'] = '1';
+            $candyObj->price = '1.56 euro';
+        }
+            
+            $fruits1 = array_slice($fruits, 0, 2);
+            $fruits2 = array_slice($fruits, 2, 3);
+        
+            unset($amountveggies["Lettuce"]);
+            $candyObj->arr1 = $fruits1;
+            $candyObj->arr2 = $fruits2;
+
+            foreach ($amountveggies as $key => $value){
+                $candyObj->$key = $value;
+            }
+
+            $candyObjNew = JSON_ENCODE($candyObj);
+            $_COOKIE["TestCookie"] = $candyObjNew;
+            var_dump(JSON_DECODE($_COOKIE["TestCookie"]));
+    }
+
+    function revertObject(){
+        $fruits = array("Apple", "Pear", "Peach");
+        $amountveggies = array("Avocado"=>"3", "Carrot"=>"6", "Asparagus"=>"10");
+
+        $candyObj = new stdClass();
+        $candyObj->type = "Lollipop";
+        $candyObj->taste = "Sweet";
+        $candyObj->color = "Pink";
+
+        function array_push_assoc($array, $key, $value){
+            $array[$key] = $value;
+            return $array;
+        }
+
+        for($x = 0; $x < 1 ; $x++){
+            array_push($fruits, 'Blueberries');
+            $amountveggies['Lettuce'] = '1';
+            $candyObj->price = '1.56 euro';
+        }
+            
+            $fruits1 = array_slice($fruits, 0, 2);
+            $fruits2 = array_slice($fruits, 2, 3);
+        
+            unset($amountveggies["Lettuce"]);
+            $candyObj->arr1 = $fruits1;
+            $candyObj->arr2 = $fruits2;
+
+            foreach ($amountveggies as $key => $value){
+                $candyObj->$key = $value;
+            }
+
+            $candyObjNew = JSON_ENCODE($candyObj);
+            $_COOKIE["TestCookie"] = $candyObjNew;
+            
+            // REVERTING STARTS HERE
+            $candyObjNew = JSON_DECODE($candyObj);
+            
+
+
+    }
 ?>
