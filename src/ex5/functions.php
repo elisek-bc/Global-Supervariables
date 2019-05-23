@@ -1,4 +1,5 @@
 <?php
+    
     function nickname_generate($nickname){
 
             //name backwards
@@ -36,6 +37,7 @@
 
             return $nickname;
     };
+
     function returnObject(){
         $fruits = array("Apple", "Pear", "Peach");
         $amountveggies = array("Avocado"=>"3", "Carrot"=>"6", "Asparagus"=>"10");
@@ -108,8 +110,18 @@
             
             // REVERTING STARTS HERE
             $candyObjNew = JSON_DECODE($candyObj);
-            
+
 
 
     }
+
+
+    //     
+
+    //                                
+
+
+    //                 if(isset($_POST['revert'])){
+    //                     print_r(revertObject());
+    //                 }                  
 ?>

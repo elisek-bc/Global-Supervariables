@@ -1,15 +1,23 @@
 <?php
     session_start();
     setcookie("TestCookie",(time()+60*60*24*30));
-    require('header.php');
+    
     require('security.php');
     require('functions.php');
-?>
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     
+    if ($_POST['botcheck'] == 'Yes'){
+    echo "<h1>".nickname_generate("alien")."</h1>";
+    }
+    else if ($_POST['botcheck'] == 'No' || isset($_POST['name'])||isset($_POST['return'])){
+    showPage();
+    }
+    else {
+    showSecurity();
+    }
+ 
+function showPage() {
+    require('header.php');
+    print <<< PART
     <div class="white">
     </div>
     
@@ -43,11 +51,13 @@
                     <input type="text" name="name">
                     <button type="submit" class="submit">Get a nickname</button>
                     <div id="result">
-                        <?php
-                            if (isset($_POST['name'])){
-                                echo nickname_generate($_POST['name']);
-                            }
-                        ?>
+PART;
+
+if (isset($_POST['name'])){
+    echo nickname_generate($_POST['name']);
+}
+
+print<<< PART2
                     </div>
                     </form>
                     <p class="cornerbottom">&#65</p>
@@ -56,21 +66,23 @@
         </div>
         <div class="row d-flex justify-content-center">
                 <div class="col returnobject text-center">
-                    <?php
-                        if(isset($_POST['return'])){
-                            print_r(returnObject());
-                        }                  
-                    ?>
-                    <?php
-                        if(isset($_POST['revert'])){
-                            print_r(revertObject());
-                        }                  
-                    ?>
+PART2;
+
+if(isset($_POST['return'])){
+    print_r(returnObject());
+    }
+
+print<<< PART3
                 </div>
             </div>
     </div>
 </body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </html>
-<?php
-
+PART3;
+}
 ?>
+
+   
